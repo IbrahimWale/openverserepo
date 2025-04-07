@@ -26,7 +26,7 @@ const userRouter = require("./routes/user.js");
 
 app.use("/api/auth", authRouter);
 app.use("/api/media", mediaRouter);
-app.use("/api/user", userRouter);
+app.use("/api/users", userRouter);
 
 app.use(errorHander);
 

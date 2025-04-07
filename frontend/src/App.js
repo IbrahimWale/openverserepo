@@ -9,7 +9,6 @@ import Signup from "./components/Signup_component.js";
 import SearchMedia from "./components/Search_media.js";
 import BarMenu from "./components/Menubar.js";
 import FetchDBResource from "./components/Fetch_fromdb.js";
-import UsersList from "./components/UserList.js";
 
 function App() {
   return (
@@ -23,7 +22,6 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/media" element={<SearchMedia />} />
             <Route path="/fetchfromdb" element={<FetchDBResource />} />
-            <Route path="/users" element={<UsersList />} />
           </Routes>
         </div>
       </Router>

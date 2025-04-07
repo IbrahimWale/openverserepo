@@ -82,23 +82,6 @@ function SearchMedia() {
     dispatch(saveMediaToDB(media));
   };
 
-  // const deleteMediaFromDB = async (mediaId) => {
-  //   try {
-  //     const response = await fetch(
-  //       `http://localhost:5000/api/delete/${mediaId}`,
-  //       {
-  //         method: "DELETE",
-  //       }
-  //     );
-  //     if (!response.ok) throw new Error("Failed to delete media");
-  //     setMessage("Media deleted successfully!");
-  //     setFilteredMedia(filteredMedia.filter((item) => item.id !== mediaId));
-  //   } catch (error) {
-  //     setMessage("Error deleting media.");
-  //     console.error(error);
-  //   }
-  // };
-
   const saveToLocal = (media) => {
     const updatedLocalMedia = [
       media,
@@ -229,7 +212,7 @@ function SearchMedia() {
                 </button>
                 <button
                   className="bg-red-500 text-white p-2 rounded flex-1"
-                  onClick={() => console.log(media.id)}
+                  onClick={() => dispatch(deleteMedia(media.id))}
                 >
                   Delete from DB
                 </button>
